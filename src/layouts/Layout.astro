@@ -13,14 +13,14 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body   class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
+	<body   class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] px-4 py-4">
 		
-		<Header />
+		<Header  />
 		<slot />
 	</body>
 </html>
@@ -30,6 +30,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: "IBM Plex Sans",system-ui, sans-serif;
+		scroll-behavior: smooth ;
 		
 	}
 
@@ -40,5 +41,11 @@ const { title } = Astro.props;
 
 		height: 100vh;
 		font-family: "IBM Plex Sans";
+		
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>

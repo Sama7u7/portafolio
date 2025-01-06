@@ -6,49 +6,53 @@ import Social from '../components/Social.astro';
 import Linkedin from '../icons/Linkedin.astro';
 import GitHub from '../icons/GitHub.astro';
 import Mail from '../icons/Mail.astro';
+import Maletin from '../icons/Maletin.astro';
+import Computer from '../icons/Computer.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-40">
+	<main class="px-2">
+		<SectionContainer class="w-full lg:w-[740px] mx-auto py-40">
 
-			<img class="rounded-full size-15 mb-4"  src="https://media.licdn.com/dms/image/v2/D4E03AQH_OqqsPVUahA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719897269744?e=2147483647&v=beta&t=VKG1xAusByQkzw0sbc9GLNJ-4H6-Ra6HFZkZx1kQX_E" alt="Alberto Samayoa Photo" />
-		<h1 class=" text-6xl font-bold flex  flex-row gap-x-4 pb-6">Hola, soy <span class="text-purple-600">Alberto</span><a href="https://www.linkedin.com/in/alberto-samayoa-385207281/" target="_blank" rel="noopener noreferrer">
-			<div class=" flex justify-center items-center py-5"><Badge>Disponible para trabajar</Badge></div></a>
+			<img class="rounded-full size-28 xl-size-20 mb-4"  src="https://media.licdn.com/dms/image/v2/D4E03AQH_OqqsPVUahA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1719897269744?e=2147483647&v=beta&t=VKG1xAusByQkzw0sbc9GLNJ-4H6-Ra6HFZkZx1kQX_E" alt="Alberto Samayoa Photo" />
+		<h1 class=" xl:text-7xl text-3xl font-bold flex  flex-row gap-x-4 pb-6">Hola, soy <span class="text-purple-600">Alberto</span><a href="https://www.linkedin.com/in/alberto-samayoa-385207281/" target="_blank" rel="noopener noreferrer">
+			<div class=" flex justify-center items-center py-3 xl:py-8"><Badge>Disponible para trabajar</Badge></div></a>
 		</h1>
-		<h2 class="text-xl text-opacity-80 mb-4"><span class="text-yellow-400">Desarrollador Web y entusista de la Creacion y Edicion de Multimedia</span>, vivo en Queretaro, Mexico, amo contruir cosas para la web y compartir lo que he aprendido. </h2>
+		<h2 class="text-xl text-opacity-80 mb-4"><span class="text-yellow-400">Desarrollador Web y entusista de la Creacion y Edicion de Multimedia</span>, vivo en Tuxtla Gutierrez, Mexico, amo contruir cosas para la web y compartir lo que he aprendido. </h2>
 
-		<nav class="flex flex-row gap-4 mb-20 py-4">
-				<Social href="https://www.linkedin.com/in/alberto-samayoa-385207281/">
-					<Linkedin class="size-7"/>
-					LinkedIn
-				</Social>
-				<Social href="https://github.com/Sama7u7">
-					<GitHub class="size-7"/>
-					GitHub
-				</Social>
-				<Social href="mailto:samayoa2002@proton.me">
-					<Mail class="size-7"/>
-					samayoa2002@proton.me
-				</Social>
-			
+		<nav class="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-10 sm:mb-20 py-4 justify-center items-center text-center">
+			<Social href="https://www.linkedin.com/in/alberto-samayoa-385207281/" class="p-2 sm:p-4">
+				<Linkedin class="size-5 sm:size-7 block mx-auto" />
+				<span class="text-sm sm:text-base">LinkedIn</span>
+			</Social>
+			<Social href="https://github.com/Sama7u7" class="p-2 sm:p-4">
+				<GitHub class="size-5 sm:size-7 block mx-auto" />
+				<span class="text-sm sm:text-base">GitHub</span>
+			</Social>
+			<Social href="mailto:samayoa2002@proton.me" class="p-2 sm:p-4">
+				<Mail class="size-5 sm:size-7 block mx-auto" />
+				<span class="text-sm sm:text-base">samayoa2002@proton.me</span>
+			</Social>
 		</nav>
-		<section class="mb-20">
-			<h2 class="text-3xl font-bold mb-4 py-10">Experiencia</h2>
+		
+		
+		<SectionContainer id="experiencia"class="mb-20">
+			<h2 class="text-5xl font-semibold mb-4 py-10 flex gap-x-2 items-center"><Maletin class="size-12"/>Experiencia</h2>
 		<Experiencia />
-		</section>
+		</SectionContainer>
 
 
-		<section  class="mb-20">
-			<h2 class="text-3xl font-bold mb-4 py-10">Proyectos</h2>
+		<SectionContainer id="proyectos" class="mb-20">
+			<h2 class="text-5xl font-semibold mb-4 py-10 flex gap-x-2 items-center"><Computer class="size-12"/>Proyectos</h2>
 			<p>
 				I work in projects  that involve web development, design, and digital marketing. I'm always looking for new challenges and opportunities to learn and grow.
 			</p>
 			<p>Here are some projects were I'm work in the past:</p>
-		</section>
+		</SectionContainer>
 
 
-		</section>
+		</SectionContainer>
 	</main>
 </Layout>
 
