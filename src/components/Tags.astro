@@ -1,0 +1,78 @@
+---
+import Laravel from '../icons/logos/Laravel.astro';
+import AndroidIcon from '../icons/logos/Android.astro'; // Ejemplo de otro ícono
+import FirebaseIcon from '../icons/logos/Firebase.astro';
+import TailWindIcon from '../icons/logos/Tailwind.astro';
+import JSON from '../icons/logos/JSON.astro';
+import ChartJsIcon from '../icons/logos/ChartJs.astro';
+import BoostrapIcon from '../icons/logos/Boostrap.astro';
+import ExpressIcon from '../icons/logos/Express.astro';
+import JavaIcon from '../icons/logos/Java.astro';
+
+const LENGUAJES = {
+  LARAVEL: {
+    name: 'Laravel',
+    icon: Laravel, // Asigna el componente del ícono aquí
+    tag: 'Laravel',
+  },
+  ANDROID: {
+    name: 'Android Studio',
+    icon: AndroidIcon, 
+    tag: 'Android Studio',
+  },
+  FIREBASE: {
+    name: 'Firebase',
+    icon: FirebaseIcon,
+    tag: 'Firebase',
+  },
+  ESP32: {
+    name: 'ExpressJS',
+    icon: ExpressIcon, 
+    tag: 'Express',
+  },
+  CHARTJS: {
+    name: 'Chart.js',
+    icon: ChartJsIcon,
+    tag: 'Chart.js',
+  },
+  BOOSTRAP: {
+    name: 'Bootstrap',
+    icon: BoostrapIcon,
+    tag: 'Bootstrap',
+  },
+  UXUI: {
+    name: 'UI/UX',
+    icon: null,
+    tag: 'UI/UX',
+  },
+  JAVA: {
+    name: 'Java',
+    icon: JavaIcon,
+    tag: 'Java',
+  },
+  TAILWIND: {
+    name: 'Tailwind CSS',
+    icon: TailWindIcon,
+    tag: 'Tailwind CSS',
+  },
+  JAVASCRIPT: {
+    name: 'JavaScript',
+    icon: JSON,
+    tag: 'JS',
+  },  
+};
+---
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
+  {Object.values(LENGUAJES).map(({ name, icon: Icon }, index) => (
+    <div
+      class="p-6 rounded-lg shadow-lg bg-gray-800/50 text-yellow-300 transition-all duration-300 flex flex-col items-center justify-between min-h-[200px]" 
+    >
+      {/* Nombre arriba */}
+      <span class="text-3xl">{name}</span>
+
+      {/* Espacio entre el texto y el ícono */}
+      {Icon && <Icon class="w-12 h-12 mt-4" />}
+    </div>
+  ))}
+</div>
+

@@ -3,11 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
 import Experiencia from '../components/Experiencia.astro';
 import Projects from '../components/Projects.astro';
+import Lenguajes from '../components/Tags.astro';
 import Social from '../components/Social.astro';
 import Linkedin from '../icons/Linkedin.astro';
 import GitHub from '../icons/GitHub.astro';
 import Mail from '../icons/Mail.astro';
 import Maletin from '../icons/Maletin.astro';
+import Code from '../icons/Code.astro';
 import Computer from '../icons/Computer.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 ---
@@ -43,10 +45,14 @@ import SectionContainer from '../components/SectionContainer.astro';
 		<Experiencia />
 		</SectionContainer>
 
-
 		<SectionContainer id="proyectos" class="mb-20">
 			<h2 class="text-5xl font-semibold mb-4 py-10 flex gap-x-2 items-center"><Computer class="size-12"/>Proyectos</h2>
 			<Projects/>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia"class="mb-20">
+			<h2 class="text-5xl font-semibold mb-4 py-10 flex gap-x-2 items-center"><Code class="size-12"/>Lenguajes</h2>
+		<Lenguajes />
 		</SectionContainer>
 
 

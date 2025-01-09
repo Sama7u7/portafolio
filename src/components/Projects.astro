@@ -1,6 +1,8 @@
 ---
+import Tags from './Tags.astro';
 const PROJECTS = [
   {
+    
     title: 'Sistema de monitoreo de germinacion de semillas',
     description: 'Este proyecto tiene como objetivo el monitoreo de la germinacion de semillas y deshidratacion de alimentos.',
     activities: [ "Desarrollo de un sistema basado en Laravel para el monitoreo en tiempo real.",
@@ -13,28 +15,27 @@ const PROJECTS = [
   },
   {
     title: 'RacconBank',
-    description: 'Interfaz de una aplicacion bancaria desarrollada en Anndroid Studio y Firebase.',
+    description: 'Interfaz de una aplicacion bancaria desarrollada en Android Studio y Firebase.',
     activities: [ "Desarrollo de una interfaz de usuario para una aplicacion bancaria.",
     "Integración de Firebase para el manejo de usuarios y transacciones.",
     "Desarrollo de un sistema de autenticación y seguridad.",
 ],
-    img: '/projects/IPN.webp',
-    link: 'https://ipnproyecto.samayoaprojects.com.mx/',
-    tags: ['Android Studio', 'Firebase', 'UI/ux', 'Java'],
+    img: '/projects/RacoonMock.webp',
+    link: 'https://github.com/Sama7u7/racoonbank',
+    tags: ['Android Studio', 'Firebase', 'UI/UX', 'Java'],
   },
 
 ];
 ---
 
 {PROJECTS.map(({ title, description, activities, img, link, tags }, projectIndex) => (
-  <div key={projectIndex} class="mb-8 p-6 rounded-lg shadow-lg bg-gray-800/50 text-white">
+  <div class="mb-8 p-6 rounded-lg shadow-lg bg-gray-800/50 text-white">
     <h3 class="text-3xl font-semibold mb-4 text-yellow-300">{title}</h3>
 
     {/* Mostrar los tags como etiquetas individuales */}
     <div class="flex flex-wrap gap-2 mb-4">
       {tags.map((tag, tagIndex) => (
         <span
-          key={`tag-${tagIndex}`}
           class="bg-yellow-500 text-black text-sm font-semibold px-3 py-1 rounded-full"
         >
           {tag}
@@ -47,7 +48,7 @@ const PROJECTS = [
     {/* Mostrar actividades como una lista de elementos */}
     <ul class="text-lg text-opacity-80 list-disc list-inside mb-4 text-pretty">
       {activities.map((activity, activityIndex) => (
-        <li key={`activity-${activityIndex}`}>{activity}</li>
+        <li>{activity}</li>
       ))}
     </ul>
 
@@ -56,7 +57,7 @@ const PROJECTS = [
       href={link}
        class="bg-yellow-500 text-black text-sm font-semibold px-3 py-1 rounded-full"
     >
-      Ver la pagina
+      Ver proyecto
     </a>
   </div>
 ))}
